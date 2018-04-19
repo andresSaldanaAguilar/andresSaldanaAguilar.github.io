@@ -1,122 +1,215 @@
-<!--  user interface -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- Personalized Styles -->
-    <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js"></script>
-    <!-- Bootstrap 4 -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-    <!-- Font Awesome -->
-    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
-    <title>App</title>
-    <!-- SweetAlert -->
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-</head>
-<body>
-    <!-- NavBar -->
-    <nav class="navbar navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="#" style="color:white">CryptoApp</a>  
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>AS</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="vendor/devicons/css/devicons.min.css" rel="stylesheet">
+    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/resume.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cabin+Condensed" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">
+        <span class="d-block d-lg-none">Start Bootstrap</span>
+        <span class="d-none d-lg-block">
+          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="">
+        </span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#education">Education</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#awards">Public Key</a>
+          </li>
+        </ul>
+      </div>
     </nav>
-    <!-- Body -->
-    <div class="container">
-        
-        <div class="card" id="main-card">
-            
-            <div class="card-body text-dark" id="transparent">
-                    <div class="card-deck" id="transparent">                       
-                        <div class="card border-dark nav-separation" id="transparent">
-                            <div class="card-body text-dark" id="card-body">
-                                <div class="row">
-                                        <!-- column 1 -->
-                                        <div class="col">
-                                            <!-- Icon and filename -->
-                                            <div class="row justify-content-center button-padding">
-                                                <i class="fas fa-lock-open fa-10x" id="lockIcon"></i>                                                  
-                                            </div>
-                                            <h5><span class="badge badge-outline-dark col align-self-center">examplefilename.txt</span></h5> 
-                                            <!--filechooser-->
 
-                                            <div class="input-group button-padding">    
-                                                <div class="custom-file">
-                                                    <input type="file" id="fileInput1" onchange="leerArchivo(this.id,'to_cipher')">
-                                                    <label class="custom-file-label" for="fileInput1">Choose file</label>
-                                                </div>
-                                            </div>
-                                            <div class="input-group mb-3">
-                                                <input type="text" class="form-control" placeholder="Key" aria-label="Recipient's username" aria-describedby="basic-addon2" required>
-                                            </div>
-                                            <!-- Variables to choose -->
-                                            <div class="row justify-content-md-center">
-                                            <div class="dropdown col col-lg-6 col-xl-6">
-                                                    <button class="btn btn-outline-dark dropdown-toggle btn-block button-padding" type="button" id="dropdownAlgorithm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                        Select Algorithm 
-                                                    </button>
-                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                        <a class="dropdown-item" onclick="setAlgorithm(event)">DES</a>
-                                                        <a class="dropdown-item" onclick="setAlgorithm(event)">AES</a>
-                                                    </div>
-                                                    </div>
-                                                    <div class="dropdown col col-lg-6 col-xl-6">
-                                                        <button class="btn btn-outline-dark dropdown-toggle btn-block button-padding" type="button" id="dropdownMode" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                            Operation Mode
-                                                        </button>
-                                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                            <a class="dropdown-item" onclick="setMode(event)">CBC</a>
-                                                            <a class="dropdown-item" onclick="setMode(event)">ECB</a>
-                                                            <a class="dropdown-item" onclick="setMode(event)">OFB</a>
-                                                            <a class="dropdown-item" onclick="setMode(event)">CFB</a>
-                                                        </div>
-                                                    </div>
-                                            </div>
-                                            <!-- Algorithm to choose -->
-                                            <div class="dropdown">
-                                                <button class="btn btn-outline-dark dropdown-toggle btn-block button-padding" href="#" role="button" id="dropdownAction" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    Action
-                                                </button>
-                                                
-                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                                    <a class="dropdown-item" onclick="setAction(event)">Decipher</a>
-                                                    <a class="dropdown-item" onclick="setAction(event)">Cipher</a>
-                                                </div>
-                                            </div>
-                                            <button type="button" class="btn btn-success btn-block" onclick="go()">Go!</button>                    
-                                        </div>
-                                        <!-- column 2 -->
-                                        <div class="col">
-                                            
-                                            <div class="row justify-content-center button-padding">
-                                                <i class="far fa-file fa-10x" ></i>
-                                            </div>
-                                            <h5><span class="badge badge-outline-dark col align-self-center">examplefilename.txt</span></h5> 
-                                            <div class="row justify-content-center button-padding">
-                                                <button type="button" class="btn btn-success col-lg-6 col-xl-6 col-sm-6 col-6" onclick="download()"><i class="fas fa-download"></i> Download File</button>  
-                                            </div>
+    <div class="container-fluid p-0">
 
-                                        </div>
-                                    </div>                                                                
-                            </div>
-                        </div>                            
-                    </div>
-
-
-                </div>
-            	<footer class="footer">
-                        <div class="border-dark bg-secondary text-center fixed-bottom" style="color:#fff">
-                            <small>Saldaña Aguilar Andres, Amador Miguel  ESCOM 2018</small>
-                            <small>Todos los derechos reservados</small>
-                        </div>
-                    </footer>
-                
-            </div>
+      <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
+        <div class="my-auto">
+          <h1 class="mb-0">Andrés
+            <span class="text-primary">Saldaña</span>
+          </h1>
+          <div class="subheading mb-5">Mexico City <br> 
+            <a href="mailto:pollyketpo@gmail.com">pollyketpo@email.com</a>
+          </div>
+          <p class="mb-5">Computer Systems Engineering Student - Freelance BackEnd Developer.</p>
+          <ul class="list-inline list-social-icons mb-0">
+            <li class="list-inline-item">
+              <a href="https://www.instagram.com/andres_saldagna/">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/in/andr%C3%A9s-arnulfo-salda%C3%B1a-aguilar-27283a148/">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://github.com/andresSaldanaAguilar">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
         </div>
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
+        <div class="my-auto">
+          <h2 class="mb-5">Experience</h2>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Fullstack developer</h3>
+              <div class="subheading mb-3">Ferromex</div>
+              <p>My sister and i developed a gestionable web app where the client is capable to create different reports to manage vandalism, maintenance and repairments.</p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">August 2017 - March 2018</span>
+            </div>
+          </div>
+
+
+    
+
+        </div>
+
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
+        <div class="my-auto">
+          <h2 class="mb-5">Education</h2>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">ESCOM</h3>
+              <div class="subheading mb-3">Computer Systems Engineer</div>
+              <div>--</div>
+              <p>GPA: 9.1</p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">August 2015 - Present</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
+        <div class="my-auto">
+          <h2 class="mb-5">Skills</h2>
+
+          <div class="subheading mb-3">Programming Languages &amp; Tools</div>
+          <ul class="list-inline list-icons">
+            <li class="list-inline-item">
+              <i class="devicons devicons-html5"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-css3"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-javascript"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-jquery"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-laravel"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-java"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-bootstrap"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-python"></i>
+            </li>
+          </ul>
+
+         
+        </div>
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
+        <div class="my-auto">
+          <h2 class="mb-5">Interests</h2>
+          <p>I like to spend time with my family, take photographs of city, make drawings on my free time and go around just to chill out.</p>
+          <p class="mb-0">I like to see some Studio Ghibli movies on my free time, make some drawing and go visiting new countries if i can.</p>
+        </div>
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="awards">
+        <div class="my-auto">
+          <h2 class="mb-5">PUBLIC KEY</h2>
+          <div class="subheading mb-3">Go ahead and send me a RSA cipher message!</div>
+          <ul class="fa-ul mb-0">
+            <li>
+              <i class="fa-li fa fa-lock text-warning"></i>
+              XXXX-XXXX-XXXX</li>
+          </ul>
+        </div>
+      </section>
+
     </div>
-</body>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/resume.min.js"></script>
+
+  </body>
+
 </html>
