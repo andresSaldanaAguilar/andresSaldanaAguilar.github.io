@@ -1,0 +1,57 @@
+textarea{
+    height: 40%;
+}
+
+.card-header{
+    background-color: #fff;
+}
+
+#title{
+    font-family: 'Ewert', cursive;
+    font-size: 300%;
+}
+
+#main-card{
+    background-color: transparent;
+    border-color: transparent;
+    opacity: 0%;
+}
+
+#transparent{
+    background-color: transparent;
+}
+
+
+#decipher{
+    height: 60%;
+}
+
+a{
+    border-radius: 0%;
+}
+
+.button-padding{
+    margin-bottom: 4%;
+    margin-top: 4%; 
+}
+
+i{
+    display:block;
+    text-align:center
+}
+
+.text-center{
+    text-align: center;
+}
+
+#header{
+    text-align: center;
+    font-size: 600%;
+    font-family: 'Bungee Shade', cursive;
+    /*color:white;
+    background: primary;*/
+}
+
+
+
+
